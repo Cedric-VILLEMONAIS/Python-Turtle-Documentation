@@ -6,6 +6,8 @@
 from turtle import *
 ```
 
+# Sur Basthon il faut penser à mettre ```done()``` à la fin du script
+
 ## Obtention d'informations sur la tortue :
 | Commande                                              | Explication                                                                                 |
 |-------------------------------------------------------|---------------------------------------------------------------------------------------------|
