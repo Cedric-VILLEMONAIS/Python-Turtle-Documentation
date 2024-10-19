@@ -71,11 +71,13 @@ Attention : Sur Basthon il faut penser à mettre ```done()``` à la fin du scrip
 ### Exemples de la documentation :
 #### Exemple 1 :
 ```python
+from turtle import *
 for steps in range(100):
     for c in ('blue', 'red', 'green'):
         color(c)
         forward(steps)
         right(30)
+done()
 ```
 
 ![](Documentation/Ex_doc_boucle_1.png)
@@ -83,6 +85,7 @@ for steps in range(100):
 
 #### Exemple 2 :
 ```python
+from turtle import *
 color('red')
 begin_fill()
 fillcolor('yellow')
@@ -92,11 +95,13 @@ while True:
     if abs(pos()) < 1:
         break
 end_fill()
+done()
 ```
 ![](Documentation/Ex_doc_boucle_2.png)
 
 #### Exemple 3 :
 ```python
+from turtle import *
 home()
 print(distance(30,40)) # 50.0
 # Il est possible de créer plusieurs tortues comme dans l'exemple ci-dessous on crée une tortue joe
@@ -105,6 +110,7 @@ joe.forward(77)
 color("blue") # On change la couleur de la tortue d'origine en bleu
 backward(60)
 print(distance(joe)) # 137.0 (77+60=137)
+done()
 ```
 ![](Documentation/Ex_doc_3.png)
 
@@ -123,11 +129,13 @@ forward(60) # la tortue avance de 60 pixels
 goto(0, 0) # revient à la position initiale
 #done() # pour pycharm pour que la fenêtre ne se ferme pas
 exitonclick() # ou pour que la fenêtre ne se ferme pas à la fin du dessin
+done()
 ```
 ![](Documentation/Ex_cours_1.png)
 
 ### Application 2 : Rectangle épais
 ```python
+from turtle import *
 width(6) #epaisseur du trait
 color(1, 0, 0) # R max, G = 0, B = 0,
 goto(60, 0)
@@ -153,6 +161,7 @@ done()
 
 ### Application 3 :
 ```python
+from turtle import *
 def spirale_carre(n, increment):
     speed(5) # parametrage de la vitesse de 1 lent à 10 rapide, 0 étant la vitesse la plus rapide
     shape("turtle") # choix de la forme de la tortue
@@ -170,12 +179,13 @@ def spirale_carre(n, increment):
         left(angle) # tourner de angle degrés
 
 spirale_carre(6, 5) # appel de la fonction pour tracer une spirale carrée
-exitonclick() # indispensable en cas d'exécution dans un IDE
+done() # indispensable en cas d'exécution dans un IDE
 ```
 ![](Documentation/Ex_cours_3.png)
 
 ### Application 4 :
 ```python
+from turtle import *
 def carre(cote):
     for i in range(4):
         forward(cote)
@@ -186,6 +196,6 @@ def frise (nbre, cote):
         carre(cote)
         left(5)
 frise(10,100)
-exitonclick()
+done()
 ```
 ![](Documentation/Ex_cours_4.png)
